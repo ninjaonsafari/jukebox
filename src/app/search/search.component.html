@@ -1,0 +1,10 @@
+<h1>search</h1>
+
+<select>
+     <option *ngFor="let item of serviceTypes | keys" [value]="item.key">{{item.value}}</option>
+  </select>
+
+<input [(ngModel)]="term" placeholder="Search">
+
+{{term}}
+<button (click)="addToQueue()">add to queue</button>
